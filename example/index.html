@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <link rel="stylesheet" href="./dist/index.module.css" />
+    <title>easycontext | Add a context menu to any website</title>
+  </head>
+  <body>
+    <style></style>
+
+    <header>
+      <h1>easycontext</h1>
+      <a href="https://github.com/TimoBechtel/easycontext">Github</a>
+      <p>Right click anyhwere. Or tap and hold on mobile.</p>
+    </header>
+
+    <section>
+      <button id="testbutton">Right click me</button>
+    </section>
+
+    <script type="module">
+      import { contextmenu } from './dist/index.module.js';
+      let count = 0;
+      contextmenu(document, (target) => {
+        return [
+          ...(target.tagName === 'BUTTON'
+            ? [
+                {
+                  text: `Log to console.`,
+                  onClick() {
+                    console.log(`I was pressed ${++count} times.`);
+                  },
+                },
+                {
+                  text: 'Alert',
+                  onClick() {
+                    alert('🍩');
+                  },
+                },
+                {
+                  text: 'Remove',
+                  onClick() {
+                    target.parentElement.removeChild(target);
+                  },
+                },
+              ]
+            : [
+                {
+                  text: 'Reload page',
+                  onClick() {
+                    window.location.reload();
+                  },
+                },
+              ]),
+          {
+            text: `ELement: ${target}`,
+          },
+        ];
+      });
+    </script>
+  </body>
+</html>

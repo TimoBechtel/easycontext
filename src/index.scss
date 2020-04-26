@@ -1,0 +1,38 @@
+@import 'base';
+
+.context-menu {
+  border-radius: 3px;
+  background: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0s 0.1s, visibility 0.1s, opacity 0.1s;
+  &.menu-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+    transition: transform 0.1s, visibility 0.2s, opacity 0.2s;
+  }
+  li {
+    &:first-child {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+    &:last-child {
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+    padding: 10px 30px;
+    min-width: 100px;
+    color: rgba(0, 0, 0, 0.4);
+    &.menu-item-clickable {
+      color: rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
