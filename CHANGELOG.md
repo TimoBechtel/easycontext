@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/TimoBechtel/easycontext/compare/v1.0.0...v1.0.1) (2020-06-22)
+
+
+### Bug Fixes
+
+* **readme:** fix links to reflect branch renaming ([e137230](https://github.com/TimoBechtel/easycontext/commit/e13723061f3cf340d6a8ec49ad99590657f31ed9))
+
 # 1.0.0 (2020-04-26)
 
 

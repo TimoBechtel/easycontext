@@ -1,6 +1,6 @@
 {
   "name": "easycontext",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple context menu for the web.",
   "source": "src/index.js",
   "main": "dist/index.js",
