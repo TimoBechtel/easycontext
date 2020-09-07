@@ -8,10 +8,10 @@
   "unpkg": "dist/index.umd.js",
   "types": "src/index.d.ts",
   "scripts": {
-    "build": "microbundle && npm run build:example",
-    "build:example": "microbundle build -f es -o example/dist/index.mjs",
-    "dev": "microbundle watch",
-    "dev:example": "microbundle watch -f es -o example/dist/index.mjs",
+    "build": "microbundle && npm run build:example --css-modules false",
+    "build:example": "microbundle build -f es -o example/dist/index.mjs --css-modules false",
+    "dev": "microbundle watch --css-modules false",
+    "dev:example": "microbundle watch -f es -o example/dist/index.mjs --css-modules false",
     "prepare": "npm run build",
     "lint": "eslint src",
     "test": "npm run lint"
@@ -37,12 +37,12 @@
   },
   "homepage": "https://github.com/TimoBechtel/easycontext#readme",
   "devDependencies": {
-    "@compactjs/uea": "^1.0.0",
-    "@semantic-release/changelog": "^5.0.0",
+    "@compactjs/uea": "^1.0.3",
+    "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "eslint": "^6.8.0",
-    "microbundle": "^0.12.0-next.8",
-    "node-sass": "^4.14.0",
-    "semantic-release": "^17.0.4"
+    "eslint": "^7.8.1",
+    "microbundle": "^0.12.3",
+    "node-sass": "^4.14.1",
+    "semantic-release": "^17.1.1"
   }
 }
