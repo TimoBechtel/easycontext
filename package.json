@@ -42,7 +42,7 @@
     "@semantic-release/git": "^9.0.0",
     "eslint": "^7.8.1",
     "microbundle": "^0.12.3",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "semantic-release": "^17.1.1"
   }
 }
